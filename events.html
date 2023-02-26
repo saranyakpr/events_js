@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-eqiv="X-UA-compatible" content="IE=Rdge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>star</title>
+</head>
+<style>
+   .border{
+       border:1px solid black;
+	   width:25rem;
+	   height:25rem;
+   }
+</style>
+<body>
+
+<div id='cont' class='border' onmouseover='over()' onmouseout='out()'></div>
+
+   <script>
+   
+   function over(){
+   setInterval(function(){
+      let cont = document.getElementById('cont');
+	  red = Math.trunc(Math.random()*256);
+	  blue = Math.trunc(Math.random()*256);
+	  yellow = Math.trunc(Math.random()*256);
+	  colors = "rgb("+red+","+blue+","+yellow+")";
+	  cont.style.backgroundColor=colors;
+   },1000);
+   }
+   
+   function out(){
+      let cont = document.getElementById('cont');
+	  cont.style.backgroundColor='';
+   }
+   
+   
+   
+   
+   
+   </script>
+
+</body>
+</html>
